@@ -1,0 +1,379 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: var(--body-colour);
+    color: var(--text-colour);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#main-container {
+    max-width:100%;
+    padding:0;
+}
+
+.bg-nav-colour {
+    background: var(--nav-colour);
+}
+
+.bg-body-colour {
+    background: var(--body-colour);
+}
+
+.bg-black-colour {
+    background: var(--black-colour);
+}
+
+.bg-white-colour {
+    background: var(--white-colour);
+}
+
+.bg-text-colour {
+    background: var(--text-colour);
+}
+
+.bg-button-colour {
+    background: var(--button-colour);
+}
+
+.border-theme-colour-0 {
+    border-color: var(--nav-colour);
+}
+
+.border-theme-colour-1 {
+    border-color: var(--body-colour);
+}
+
+.border-theme-colour-2 {
+    border-color: var(--black-colour);
+}
+
+.border-theme-colour-3 {
+    border-color: var(--white-colour);
+}
+
+.border-theme-colour-3 {
+    border-color: var(--button-colour);
+}
+
+.text-color-0 {
+    color: var(--theme-colour-0)
+}
+
+.text-color-1 {
+    color: var(--theme-colour-1)
+}
+
+.text-color-2 {
+    color: var(--theme-colour-2)
+}
+
+.text-color-3 {
+    color: var(--theme-colour-3)
+}
+
+.text-color-4 {
+    color: var(--theme-colour-4)
+}
+
+/* These calsses are being used purely to find the components in our JavaScript*/
+.deleteButton {
+}
+
+.editButton {
+}
+
+.detailsButton {
+}
+
+.modal.right .modal-dialog {
+    position: fixed;
+    right: 0;
+    margin: auto;
+    min-width: 30%;
+}
+
+.modal.right .modal-content {
+    height: 100%;
+}
+
+.card-container {
+    justify-content:space-between;
+    gap:20px;
+    padding:20px;
+    margin:40px;
+}
+
+
+.custom-row {
+    padding-right:0;
+    padding-left:0;
+}
+
+.remove-button:hover {
+    background-color: red;
+}
+
+#btnCancel:hover {
+    background-color: red;
+}
+
+#btnTheme {
+    padding-left: 30px; /* Adjust to position text correctly */
+    background: url(../images/moon-regular.svg) no-repeat 8px center;
+    background-size: 20px;
+    border: none;
+    color: white;
+}
+
+.nav-link {
+    color:white;
+}
+
+.video-container {
+    background-size: 50% 100%;
+    background-position: left;
+}
+
+
+
+
+#home-button {
+    display: flex;
+    justify-content:left;
+    left:10px;
+}
+
+
+.create-container {
+    max-width:50%;
+    left:0;
+
+}
+
+.create-image {
+    max-width: 50%;
+    right: 0;
+}
+.grid-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/homepageimage.png');
+    background-size: 60% 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 0;
+}
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 50%;
+    min-height: 100%;
+}
+/* Home page */
+.text-content {
+    justify-content: center;
+    width: 30%;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+ 
+}
+.image-content {
+    /* The image used */
+    background-image: url('../images/Sam’s Warehouselogoimage.png');
+    width: 100%;
+    height: 100vh;
+    background-size: 50% 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding:0;
+
+}
+
+ .image-content img {
+        max-width: 100%;
+        height: auto;
+ }
+
+/* About us*/
+ .aboutus {
+     display:flex;
+     flex-direction:row;
+     justify-content:space-around;
+     align-items:center;
+     height:100%;
+     min-height:100vh;
+ }
+
+.aboutus-content {
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    width: 30%;
+    padding: 20px;
+}
+
+.video-container {
+    width:700px;
+    height:450px;
+}
+
+#video-aboutus {
+    width: 700px;
+    height: 450px;
+}
+/* Login Password used */
+#password-form {
+    position: relative;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center; 
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#togglePasswordCreate {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#togglePasswordConfirm {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.password {
+    display:flex;
+    align-items:center;
+}
+
+
+#logo-video {
+    width: 100%;
+    right: 0;
+}
+
+
+/* Login page used */
+.login-content {
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    width: 25%;
+    height:100vh;
+    padding-left: 40px;
+}
+
+#login-row {
+    display:flex;
+    align-items:center;
+}
+
+/* Product page used */
+}
+.header-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    width:100%;
+}
+
+.card-img-top {
+    padding:0;
+    margin:0;
+    object-fit:cover;
+    height:50%;
+    width:100%;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 1.5s 2.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading__logo {
+    opacity: 0;
+    animation: logo_fade 2s 0.5s forwards;
+    width: 175px;
+}
+
+@keyframes logo_fade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

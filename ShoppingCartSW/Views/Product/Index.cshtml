@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ShoppingCartSW.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+    <div class="header-image">
+        <img id="banner" src="~/images/banner.png" >
+    </div>
+
+
+
+<div class="text-center my-4">
+    <h1>Products</h1>
+</div>
+
+<div class="card-container row my-5 ">
+    @foreach(var product in Model) 
+    {
+        <div class="card my-3 custom-row" style="width: 15rem;">
+            <img src="@product.Image" class="card-img-top" alt="product image">
+            <div class="card-body">
+                <h5 class="card-title text-black">@product.ProductName</h5>
+                <p class="card-item text-black">Unit: @product.Unit</p>
+                <p class="card-item text-black">Price: @product.UnitPrice.ToString("C")</p>
+            </div>
+            <div class="card-body card-footer">
+                <a class="add-item-button btn btn-primary bg-nav-colour" value="@product.Id">Add To Cart</a>
+            </div>
+        </div>
+    }
+
+</div>
+
+
+
+
+
+<script src="~/js/product.js" asp-append-version="true"></script>

@@ -1,0 +1,50 @@
+﻿@model ShoppingCartSW.Models.ShoppingCart
+
+<div class="modal-header ">
+    <h1 class="modal-title fs-5 text-black" id="modalTitle">Your Cart</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div class="modal-body">
+    @if (Model != null && Model.CartItem.Count() > 0)
+    {
+        <div class="container">
+            @foreach (var item in Model.CartItem)
+            {
+                <div class="card p-1 text-black">
+                    <h4>@item.product.ProductName</h4>
+                    <div>
+                        <form class="cart-qty-toggle d-flex justify-content-between align-content-center m-1">
+                            <input type="hidden" name="Id" value="@item.Id" />
+                            <button class="btn-minus btn btn-primary bg-nav-colour"><i class="fa-solid fa-minus"></i></button>
+                            <p class="qty-text mx-1" name="Quantity">@item.Quantity</p>
+                            <button class="btn-plus btn btn-primary bg-nav-colour"><i class="fa-solid fa-plus"></i></button>
+
+                            @{
+                                var lineTotal = item.product.UnitPrice * item.Quantity;
+                            }
+                          
+                            <p class="line-total mx-2" value="@item.product.UnitPrice">Total: $@lineTotal.ToString("0.00")</p>
+                        </form>
+                        <button class="remove-button btn btn-primary bg-nav-colour float-end" value="@item.Id"><i class="fa-regular fa-trash-can"></i>Remove</button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+   
+</div>
+
+<div class="modal-footer d-flex justify-content-start">
+    <div>
+        
+        <h1>Summary</h1>
+        <p id="modalGrandTotal">$0.00 <strong>inc. GST</strong></p>
+        @if (Model != null && Model.CartItem.Count() > 0)
+        {
+            <button id="btnCheckout" class="btn btn-primary bg-nav-colour" value="@Model.Id">Checkout</button>
+            <button id="btnCancel" class="btn btn-primary bg-nav-colour" value="@Model.Id">Cancel</button>
+        }
+    </div>
+</div>
+

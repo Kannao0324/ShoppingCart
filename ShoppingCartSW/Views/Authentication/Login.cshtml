@@ -1,0 +1,48 @@
+﻿@model ShoppingCartSW.Models.DTOs.LoginDTO
+
+@{
+    ViewData["Title"] = "Login";
+    string loginMessage = ViewBag.LoginMessage ?? "";
+}
+
+<div class="grid-container">
+    <div class="login-content mx-4">
+            <h1 id="login">Login</h1>
+    
+        <form asp-action="Login">
+            @if (string.IsNullOrWhiteSpace(loginMessage) == false)
+            {
+                <label class="text-danger">@loginMessage</label>
+            }
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div id="password-form" class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <div class="input-container">
+                    <input asp-for="Password" class="form-control d-inline" type="password" name="password" id="password"/> 
+                    <i class="fa-regular fa-eye-slash " id="togglePassword" ></i>
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>          
+            </div>
+            @Html.HiddenFor(Model => Model.ReturnURL)
+            <div class="form-group mb-3 mt-3">
+                <input type="submit" value="Login" class="btn btn-primary my-1" />
+            </div>
+        </form>
+            <div>
+            <a class="backhome .bg-text-colour" asp-area="" asp-action="Index" asp-controller="Product">Back to Home</a>
+            </div>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
